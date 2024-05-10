@@ -1,0 +1,145 @@
+/* Menu styling */
+.menu-container {
+  width: 1152px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper ul.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-wrapper ul.nav-list li {
+  margin-left: 30px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.nav-wrapper ul.nav-list li a {
+  color: var(--third-color);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-wrapper ul.nav-list li a:hover,
+.nav-wrapper ul.nav-list li.active a {
+  color: var(--blue-color);
+}
+
+nav ul.dropdown-list {
+  list-style-type: none;
+  display: block;
+  background: whitesmoke;
+  padding: 6px 16px;
+  position: absolute;
+  width: max-content;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  /* pointer-events: none; */
+  opacity: 0;
+}
+
+.nav-wrapper ul.dropdown-list li {
+  margin-left: 0;
+  padding: 5px 0;
+}
+
+.nav-wrapper ul.dropdown-list li a {
+  color: var(--third-color);
+}
+
+.nav-wrapper ul.nav-list li:hover .dropdown-list {
+  opacity: 1;
+  pointer-events: auto;
+  animation: moveUp 0.5s ease-in-out forwards;
+}
+
+.nav-wrapper .nav-list li .btn a {
+  color: var(--fourth-color);
+}
+
+.nav-wrapper .nav-list li .btn:hover a {
+  color: var(--third-color);
+}
+
+/* Responsive menu */
+.hamburger {
+  display: none;
+}
+
+.mobile .hamburger {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0; 
+  cursor: pointer;
+}
+
+.mobile .hamburger span {
+  background: var(--third-color);
+  width: 20px;
+  height: 2px;
+  margin-bottom: 8px;
+  background-color: black;
+}
+
+.mobile ul.nav-list {
+  /* background: linear-gradient(45deg, #f5f6fa, #dcdde1); */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Removed unwanted css   */
+.mobile .nav-wrapper ul li {
+  text-align: center;
+}
+
+.mobile ul.dropdown-list {
+  background: whitesmoke;
+  text-align: center;
+  height: 10vh;
+  overflow-y: hidden;
+  transition: opacity 1s ease-in-out;
+  padding-top: 0;
+}
+.mobile .nav-wrapper .nav-list li:hover .dropdown-list {
+  opacity: 1;
+  pointer-events: auto;
+  animation: moveUp 0.5s ease-in-out forwards;
+}
+
+.mobile .nav-wrapper ul.dropdown-list li a {
+  color: #7f8fa6 !important;
+  opacity: 1;
+}
+*/ .mobile .nav-wrapper ul.dropdown-list li a:hover {
+  color: var(--third-color);
+}
+
+.active img {
+  height: 22vh;
+}
+
+.open li{
+  text-align:justify !important;
+  margin-left: 0 !important;
+}
